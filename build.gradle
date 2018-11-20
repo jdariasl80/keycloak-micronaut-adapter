@@ -77,7 +77,7 @@ publishing {
         maven(MavenPublication) {
             groupId "uk.co.foonkiemonkey"
             artifactId "keycloak-micronaut-adapter"
-            version "1.0.1"
+            version "1.0.3"
             from components.java
         }
     }

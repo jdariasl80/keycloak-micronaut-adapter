@@ -88,7 +88,7 @@ public class SecurityFilter implements HttpServerFilter {
     }
 
     private MutableHttpResponse<?> apiError(ConstraintViolationException exception) {
-        ApiError apiError = new ApiError((new Date()).getTime(), Response.Status.BAD_REQUEST.getStatusCode(),exception.getCause().getMessage(), ConstraintViolationException.class.getName(),
+        ApiError apiError = new ApiError((new Date()).getTime(), Response.Status.BAD_REQUEST.getStatusCode(),exception.getMessage(), ConstraintViolationException.class.getName(),
                 exception.getMessage());
         String body = new Gson().toJson(apiError);
         return HttpResponse.status(HttpStatus.valueOf(Response.Status.BAD_REQUEST.getStatusCode()), exception.getMessage())
