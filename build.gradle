@@ -19,7 +19,7 @@ plugins {
 }
 
 group "uk.co.foonkiemonkey"
-version "1.0.1"
+version "1.0.3"
 description "Create API middleware to check Authorization headers against Keycloak"
 
 sourceCompatibility = 1.8
